@@ -1,0 +1,109 @@
+body {
+    
+    background-image: url(janeth.png);
+    background-size: cover; 
+    background-position: center; 
+    color: #010101;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background-color: rgba(99, 93, 93, 0.7);
+    border-radius: 10px; 
+}
+
+h1 {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hearts {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    position: relative;
+    animation: float 3s infinite;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.red {
+    background-color: red;
+    animation: fireRed 1.5s infinite;
+}
+
+.green {
+    background-color: green;
+    animation: fireGreen 1.5s infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fireRed {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fireGreen {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.halloween-characters {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    animation: slideIn 5s infinite;
+}
+
+.character {
+    width: 100px;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
